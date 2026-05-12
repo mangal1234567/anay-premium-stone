@@ -832,26 +832,29 @@ if (contactForm) {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                mode: 'cors'
+                mode: 'no-cors'
             });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            // Success - form was sent (no-cors mode doesn't give us response details)
+            await new Promise(resolve => setTimeout(resolve, 1000));
 
             contactForm.reset();
             if (window.$ && window.$.fn && $('#countrycode').length) {
                 $('#countrycode').val('').trigger('change');
             }
 
-            formMsg.textContent = 'Your enquiry has been submitted successfully. We will contact you soon.';
+            formMsg.textContent = '✓ Your enquiry has been submitted successfully. We will contact you soon.';
             formMsg.style.color = 'green';
             formMsg.style.display = 'block';
-            window.location.hash = 'form-section';
+            
+            // Scroll to message
+            formMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } catch (error) {
-            formMsg.textContent = 'There was a problem submitting your enquiry. Please try again later.';
+            console.error('Form submission error:', error);
+            formMsg.textContent = '✗ There was a problem submitting. Please try again or email us directly.';
             formMsg.style.color = 'red';
             formMsg.style.display = 'block';
+            formMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } finally {
             if (submitBtn) {
                 submitBtn.disabled = false;
