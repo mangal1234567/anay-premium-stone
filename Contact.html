@@ -227,6 +227,60 @@ height:46px;
 right:10px;
 }
 
+/* Success Banner Notification */
+
+.notification-banner {
+    position: fixed;
+    top: 20px;
+    right: -500px;
+    width: 480px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+    transition: right 0.4s ease;
+    font-weight: 500;
+}
+
+.notification-banner.show {
+    right: 20px;
+}
+
+.notification-banner.success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.notification-banner.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.notification-banner .icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.notification-banner .close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.notification-banner .close-btn:hover {
+    opacity: 1;
+}
+
 /* Floating Social */
 
 .social-icons{
@@ -674,14 +728,14 @@ DOWNLOAD CATALOGUE
 Submit your details and our team will contact you to discuss your sandstone requirements.
 </h2>
 
-<form action="https://script.google.com/macros/s/AKfycbz81oVeFD9YJfot81qnZICaXuLtKhZH0oYSIMdvbtqCfrXK3XYtosKgGWZk_QQ51JrH/exec" method="POST">
+<form id="contact-form" action="https://script.google.com/macros/s/AKfycbwPwPcBGbIKqQhZx4Zd_VvfACA5QQdBn_8pItefXXYBpF7xdM5aN0cLvGpy1xmBAS5R/exec" method="POST">
 
 <div class="form-group">
 <input type="text" name="name" placeholder="Full Name" required>
 </div>
 
 <div class="form-group">
-<input type="text" name="company" placeholder="company" required>
+<input type="text" name="Company Name" placeholder="company" required>
 </div>
 
 <div class="form-group">
@@ -690,7 +744,7 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 
-<select id="countrycode" name="country_Code" style="width:100%" required>
+<select id="countrycode" name="Country Code" style="width:100%" required>
 
 <option value="">Search Country or Code</option>
 
@@ -734,11 +788,11 @@ Submit your details and our team will contact you to discuss your sandstone requ
 </div>
 
 <div class="form-group">
-<input type="tel" name="Phone" placeholder="Phone / WhatsApp Number" required>
+<input type="tel" name="Phone Number" placeholder="Phone / WhatsApp Number" required>
 </div>
 
 <div class="form-group">
-<select name="project_Type" required>
+<select name="Project Type" required>
 <option value="">project_Type</option>
 <option>Residential</option>
 <option>Commercial</option>
@@ -753,9 +807,6 @@ Submit your details and our team will contact you to discuss your sandstone requ
 
 <div class="form-group">
 <button type="submit" class="submit-btn">SUBMIT</button>
-<p id="form-msg" style="margin-top:15px;color:green;display:none;">
-Your enquiry has been submitted successfully.
-</p>
 </div>
 
 </form>
@@ -772,6 +823,12 @@ Your enquiry has been submitted successfully.
 <i class="fab fa-facebook-f"></i>
 </a>
 
+</div>
+
+<div id="notification-banner" class="notification-banner">
+    <span class="icon">✓</span>
+    <span id="notification-text">Your enquiry has been submitted successfully!</span>
+    <button class="close-btn" onclick="closeNotification()">✕</button>
 </div>
 
 <div class="footer">
@@ -810,6 +867,75 @@ function highlightActiveMenu() {
     }
 }
 highlightActiveMenu();
+
+function showNotification(message, type = 'success') {
+    const banner = document.getElementById('notification-banner');
+    const text = document.getElementById('notification-text');
+    const icon = banner.querySelector('.icon');
+    
+    banner.classList.remove('success', 'error', 'show');
+    text.textContent = message;
+    banner.classList.add(type, 'show');
+    
+    if (type === 'error') {
+        icon.textContent = '✕';
+    } else {
+        icon.textContent = '✓';
+    }
+    
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+        closeNotification();
+    }, 5000);
+}
+
+function closeNotification() {
+    const banner = document.getElementById('notification-banner');
+    banner.classList.remove('show');
+}
+
+const contactForm = document.getElementById('contact-form');
+const submitBtn = contactForm ? contactForm.querySelector('.submit-btn') : null;
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        if (!contactForm.action) return;
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+        }
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            // Success - form was sent
+            await new Promise(resolve => setTimeout(resolve, 800));
+
+            contactForm.reset();
+            if (window.$ && window.$.fn && $('#countrycode').length) {
+                $('#countrycode').val('').trigger('change');
+            }
+
+            showNotification('✓ Your enquiry has been submitted successfully. We will contact you soon!', 'success');
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showNotification('✕ Failed to submit. Please try again or email us directly.', 'error');
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'SUBMIT';
+            }
+        }
+    });
+}
 
 </script>
 
