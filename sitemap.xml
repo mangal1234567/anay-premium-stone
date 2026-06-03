@@ -3,37 +3,50 @@
 
   <url>
     <loc>https://anaypremiumstone.com/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://anaypremiumstone.com/Dholpur%20Beige.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://anaypremiumstone.com/About.html</loc>
+    <lastmod>2026-06-03</lastmod>
     <priority>0.8</priority>
   </url>
 
-<url>
+  <url>
+    <loc>https://anaypremiumstone.com/Contact.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://anaypremiumstone.com/Dholpur%20Beige.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://anaypremiumstone.com/Dholpur%20red.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <priority>0.8</priority>
-</url>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
+  <url>
     <loc>https://anaypremiumstone.com/Bansi%20Paharpur%20Pink.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <priority>0.8</priority>
-</url>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
+  <url>
     <loc>https://anaypremiumstone.com/why-dholpur-beige-sandstone-for-luxury-villas.html</loc>
-    <lastmod>2026-05-27</lastmod>
-    <priority>0.8</priority>
-</url>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.7</priority>
+  </url>
 
-<url>
-  <loc>https://www.anaypremiumstone.com/sandstone-exporter-from-india.html</loc>
-</url>
-
+  <url>
+    <loc>https://anaypremiumstone.com/sandstone-exporter-from-india.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.9</priority>
+  </url>
 
 </urlset>
