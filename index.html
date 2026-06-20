@@ -679,7 +679,102 @@ padding-bottom:5px;
         .dropdown:hover .dropdown-content {
             display: block;
         }
-    
+/* SANDSTONE RANGE */
+
+.stone-range{
+padding:120px 8%;
+background:#f8f5f0;
+}
+
+.stone-range-title{
+text-align:center;
+margin-bottom:80px;
+}
+
+.stone-range-title h2{
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:15px;
+}
+
+.stone-range-title p{
+max-width:900px;
+margin:auto;
+}
+
+.stone-block{
+margin-bottom:100px;
+}
+
+.stone-block h3{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.stone-desc{
+max-width:900px;
+margin:0 auto 40px auto;
+text-align:center;
+}
+
+.stone-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-bottom:30px;
+}
+
+.stone-gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:8px;
+transition:0.4s ease;
+cursor:pointer;
+}
+
+.stone-gallery img:hover{
+transform:scale(1.03);
+}
+
+.stone-info{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.stone-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 35px;
+background:#2c2c2c;
+color:white;
+text-decoration:none;
+letter-spacing:1px;
+}
+
+@media(max-width:768px){
+
+.stone-gallery{
+grid-template-columns:1fr;
+}
+
+.stone-gallery img{
+height:250px;
+}
+
+.stone-range-title h2{
+font-size:32px;
+}
+
+.stone-block h3{
+font-size:28px;
+}
+
+}    
+
 /* About1 logo & header overrides */
 .logo img{
 max-height:250px;
@@ -738,8 +833,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
             <h1>Sandstone Manufacturer, Supplier & Exporter</h1>
 
            
-                <p>ANAY Premium Stone is a quarry owner, sandstone manufacturer, processor, supplier, wholesaler, exporter, and bulk supplier in India. We supply Dholpur Beige Sandstone, Dholpur Red Sandstone, and Bansi Paharpur Pink Sandstone in the form of tiles, slabs, paving stones, cobbles, kerbstones, wall cladding, steps, and cut-to-size products for importers, distributors, wholesalers, contractors, landscapers, builders, developers, and commercial projects worldwide.
-
+                <p>ANAY Premium Stone is a quarry owner, sandstone manufacturer, processor, supplier, wholesaler, exporter and bulk supplier of Rajasthan sandstone. We supply Dholpur Beige Sandstone, Dholpur Red Sandstone and Bansi Paharpur Pink Sandstone in blocks, slabs, tiles, paving stones, cobbles, kerbstones, wall cladding, steps and custom cut sizes for importers, distributors, wholesalers, contractors, landscapers, builders, developers, retailers and commercial projects worldwide.
             </p>
 
             <div class="hero-buttons">
@@ -781,51 +875,177 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
         </div>
     </section>
 
-   <!-- COLLECTION -->
+   <section class="stone-range" id="collection">
 
-<section class="collection" id="collection">
+<div class="stone-range-title">
 
-    <h2>Sandstone Collection</h2>
+<h2>Our Sandstone Range</h2>
 
-    <div class="collection-grid">
+<p>
+Explore our quarry-owned Rajasthan sandstone collection available in slabs, tiles, wall cladding, cobbles, paving stones, kerbstones, steps and custom cut sizes for global projects.
+</p>
 
-        <!-- PRODUCT 1 -->
+</div>
 
-        <a href="Dholpur Beige.html" class="collection-item">
+<!-- Dholpur Beige -->
 
-            <img src="images/biege-sandstone.webp" 
-            alt="Dholpur Beige Sandstone Supplier & Exporter in India">
+<div class="stone-block">
 
-            <h3>Dholpur Beige</h3>
+<h3>Dholpur Beige Sandstone</h3>
 
-        </a>
+<p class="stone-desc">
+Dholpur Beige Sandstone is supplied in blocks, slabs, tiles, wall cladding, paving stones and cobbles for landscaping, commercial projects, residential developments and bulk export supply.
+</p>
 
-        <!-- PRODUCT 2 -->
+<div class="stone-gallery">
 
-        <a href="Dholpur red.html" class="collection-item">
+<img src="images/anay-premium-stone-dholpur-beige-sandstone-block-slabs-rajasthan.webp" alt="Dholpur Beige Block Slabs">
 
-            <img src="images/red-sandstone.webp" 
-            alt="Dholpur Red Sandstone Supplier & Exporter in India">
+<img src="images/anay-premium-stone-dholpur-beige-sandstone-tiles-manufacturer-india.webp" alt="Dholpur Beige Tiles">
 
-            <h3>Dholpur Red</h3>
+<img src="images/anay-premium-stone-dholpur-beige-sandstone-cladding-rajasthan.webp" alt="Dholpur Beige Cladding">
 
-        </a>
+<img src="images/anay-premium-stone-dholpur-beige-sandstone-cobble-rajasthan.webp" alt="Dholpur Beige Cobbles">
 
-        <!-- PRODUCT 3 -->
+</div>
 
-        <a href="Bansi Paharpur Pink.html" class="collection-item">
+<div class="stone-info">
 
-            <img src="images/pink-sandstone.webp" 
-            alt="Bansi Paharpur Pink Sandstone Supplier & Exporter in India">
+<p>
+Applications: Paving • Landscaping • Flooring • Wall Cladding • Commercial Projects
+</p>
 
-            <h3>Bansi Paharpur Pink</h3>
+<a href="Dholpur Beige.html" class="stone-btn">
+VIEW DHOLPUR BEIGE
+</a>
 
-        </a>
+</div>
 
-    </div>
+</div>
+
+<!-- Dholpur Red -->
+
+<div class="stone-block">
+
+<h3>Dholpur Red Sandstone</h3>
+
+<p class="stone-desc">
+Dholpur Red Sandstone is available in slabs, tiles, wall cladding, cobbles and paving products for contractors, distributors, wholesalers and international buyers.
+</p>
+
+<div class="stone-gallery">
+
+<img src="images/anay-premium-stone-dholpur-red-bulk-sandstone-slabs.webp" alt="Dholpur Red Slabs">
+
+<img src="images/anay-premium-stone-dholpur-red-sandstone-tiles-rajasthan-india.webp" alt="Dholpur Red Tiles">
+
+<img src="images/anay-premium-stone-dholpur-red-sandstone-block-cladding-rajasthan.webp" alt="Dholpur Red Cladding">
+
+<img src="images/anay-premium-stone-dholpur-red-sandstone-cobble-rajasthan.webp" alt="Dholpur Red Cobbles">
+
+</div>
+
+<div class="stone-info">
+
+<p>
+Applications: Landscaping • Paving • Public Spaces • Commercial Projects
+</p>
+
+<a href="Dholpur red.html" class="stone-btn">
+VIEW DHOLPUR RED
+</a>
+
+</div>
+
+</div>
+
+<!-- BANSI -->
+
+<div class="stone-block">
+
+<h3>Bansi Paharpur Pink Sandstone</h3>
+
+<p class="stone-desc">
+Bansi Paharpur Pink Sandstone is widely used in paving, flooring, landscaping, wall cladding and architectural stone projects across India and international markets.
+</p>
+
+<div class="stone-gallery">
+
+<img src="images/bansi-paharpur-pink-sandstone-stockyard.webp" alt="Bansi Pink Stockyard">
+
+<img src="images/bansi-paharpur-pink-sandstone-bulk-slabs.webp" alt="Bansi Pink Bulk Slabs">
+
+<img src="images/bansi-paharpur-pink-sandstone-slabs.webp" alt="Bansi Pink Slabs">
+
+<img src="images/bansi-paharpur-pink-sandstone-tiles.webp" alt="Bansi Pink Tiles">
+
+</div>
+
+<div class="stone-info">
+
+<p>
+Applications: Landscaping • Flooring • Heritage Projects • Commercial Buildings
+</p>
+
+<a href="Bansi Paharpur Pink.html" class="stone-btn">
+VIEW BANSI PAHARPUR PINK
+</a>
+
+</div>
+
+</div>
 
 </section>
-    
+
+<!-- PRODUCT FORMATS -->
+
+<section class="split-section" style="background:#ffffff; text-align:center;">
+
+<h2 style="font-family:'Playfair Display', serif; margin-bottom:20px;">
+Available Product Formats
+</h2>
+
+<p style="max-width:900px; margin:auto; margin-bottom:50px;">
+ANAY Premium Stone supplies Rajasthan sandstone in multiple formats for importers, distributors, wholesalers, contractors, developers, landscapers and commercial projects worldwide.
+</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;max-width:1200px;margin:auto;">
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Blocks</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Slabs</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Tiles</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Paving</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Cobbles</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Sandstone Kerbstones</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Wall Cladding</h3>
+</div>
+
+<div style="background:#f8f5f0;padding:30px;border-radius:8px;">
+<h3>Steps & Cut-to-Size</h3>
+</div>
+
+</div>
+
+</section>
 
     <!-- APPLICATIONS -->
 
@@ -923,7 +1143,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
             </div>
 
             <div class="split-text">
-                <h2>Global Sandstone Supply</h2>
+                <h2>Global Bulk Sandstone Supply</h2>
                 <p>
                     ANAY Premium Stone supplies sandstone to importers, distributors, wholesalers, contractors, landscapers, builders, developers, retailers, and project suppliers worldwide. Our bulk supply capabilities, export packaging, container loading expertise, and reliable logistics support projects ranging from landscaping and paving to commercial developments and large-scale construction.
                 </p>
@@ -932,9 +1152,47 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
         </div>
     </section>
 
-    <!-- WHY CHOOSE -->
+<!-- WHO WE SUPPLY -->
 
-    <section class="dark">
+<section class="split-section" style="background:#f8f5f0;text-align:center;">
+
+<h2 style="font-family:'Playfair Display', serif;margin-bottom:20px;">
+Who We Supply
+</h2>
+
+<p style="max-width:900px;margin:auto;margin-bottom:50px;">
+ANAY Premium Stone supplies sandstone products to businesses, distributors and project buyers across domestic and international markets.
+</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;max-width:1200px;margin:auto;">
+
+<div style="background:white;padding:25px;border-radius:8px;">Importers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Distributors</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Wholesalers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Retailers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Contractors</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Landscapers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Builders</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Developers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Project Suppliers</div>
+
+<div style="background:white;padding:25px;border-radius:8px;">Stone Traders</div>
+
+</div>
+
+</section>
+
+<!-- WHY CHOOSE -->
+
+<section class="dark">
 
         <h2>Why Choose ANAY Premium Stone</h2>
 
