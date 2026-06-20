@@ -773,7 +773,23 @@ font-size:32px;
 font-size:28px;
 }
 
-}    
+} 
+
+.global-supply-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:1200px;
+margin:auto;
+}
+
+@media(max-width:768px){
+
+.global-supply-grid{
+grid-template-columns:1fr;
+}
+
+}   
 
 .global-supply-image{
 width:100%;
@@ -1156,24 +1172,23 @@ ANAY Premium Stone supplies Rajasthan sandstone in multiple formats for importer
 
             <img src="images/exterior-flooring.webp">
 
-            <img src="images/commercial-buildings-sandstone.webp">
-
             <div>
-                <div>
 <h3>Commercial Buildings</h3>
 <p>
 Rajasthan sandstone is widely used for commercial developments, office buildings, retail complexes, hospitality projects and mixed-use developments. Dholpur Beige, Dholpur Red and Bansi Paharpur Pink sandstone provide durability, low maintenance and timeless aesthetics for large-scale commercial applications.
 </p>
 </div>
 
-            <div>
+<img src="images/commercial-buildings-sandstone.webp">
+
+<img src="images/public-infrastructure-sandstone.webp">
+
+<div>
 <h3>Public Infrastructure & Urban Spaces</h3>
 <p>
 Sandstone paving, kerbstones, cladding and landscape products are suitable for public spaces, urban developments, civic projects, streetscapes, educational campuses and infrastructure projects. Natural sandstone offers durability, weather resistance and long-term performance in high-traffic environments.
 </p>
 </div>
-
-            <img src="images/public-infrastructure-sandstone.webp">
 
             <img src="images/wall-cladding.webp">
 
@@ -1227,7 +1242,7 @@ ANAY Premium Stone supplies Rajasthan sandstone to importers, distributors, whol
 
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:auto;">
+<div class="global-supply-grid">
 
 <div style="background:white;padding:40px;border-radius:10px;">
 
