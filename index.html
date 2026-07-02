@@ -903,7 +903,7 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 [
 {
   "@context":"https://schema.org",
-  "@type":"Corporation",
+  "@type":"Organization",
   "@id":"https://anaypremiumstone.com/#organization",
   "name":"ANAY Premium Stone",
   "url":"https://anaypremiumstone.com/",
@@ -917,13 +917,27 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
   "description":"ANAY Premium Stone is a quarry owner, sandstone manufacturer, processor, supplier, wholesaler and exporter of Rajasthan sandstone. We supply Dholpur Beige Sandstone, Dholpur Red Sandstone and Bansi Paharpur Pink Sandstone for residential, commercial, landscaping and infrastructure projects worldwide.",
   "email":"info@anaypremiumstone.com",
   "telephone":"+91-7732865515",
-  "address":{
+"contactPoint":{
+  "@type":"ContactPoint",
+  "telephone":"+91-7732865515",
+  "contactType":"sales",
+  "areaServed":"Worldwide",
+  "availableLanguage":[
+    "English",
+    "Hindi"
+  ]
+},  
+"address":{
       "@type":"PostalAddress",
       "addressLocality":"Sarmathura",
       "addressRegion":"Rajasthan",
       "postalCode":"328026",
       "addressCountry":"IN"
   },
+"foundingLocation":{
+  "@type":"Place",
+  "name":"Sarmathura, Dholpur, Rajasthan, India"
+},
   "areaServed":[
       "India",
       "United States",
