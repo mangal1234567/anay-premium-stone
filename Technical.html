@@ -16,7 +16,7 @@
 
 <title>Sandstone Technical Specifications, Processing & Supply Capability | ANAY Premium Stone</title>
 <meta name="description" content="ANAY Premium Stone is a quarry owner, sandstone manufacturer, processor, supplier, wholesaler, exporter and bulk supplier of Dholpur Beige, Dholpur Red and Bansi Paharpur Pink sandstone. View technical specifications, processing capability and quality standards.">
-<link rel="canonical" href="https://anaypremiumstone.com/Technical.html">
+<link rel="canonical" href="https://anaypremiumstone.com/Technical.html" />
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Sandstone Technical Specifications | ANAY Premium Stone">
 
@@ -453,13 +453,13 @@ header { padding-right:8% !important; padding-left:0 !important; height:100px !i
 <header>
 
 <div class="logo">
-    <a href="index.html">
+    <a href="/">
         <img src="images/anay-premium-stone-logo.webp" alt="ANAY Premium Stone Logo" >
     </a>
 </div>
 
 <nav>
-<a href="index.html">Home</a>
+<a href="/">Home</a>
 <a href="About.html">About</a>
 <div class="dropdown">
     <a href="Products.html" class="dropbtn">Products ▼</a>
@@ -619,13 +619,13 @@ Quarry Owner | Manufacturer | Processor | Supplier | Wholesaler | Exporter | Bul
 <script>
 // Highlight active menu
 function highlightActiveMenu() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || '/';
     const navLinks = document.querySelectorAll('nav a');
     const productPages = ['Dholpur Beige.html', 'Dholpur red.html', 'Bansi Paharpur Pink.html'];
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        if (href === currentPage || (currentPage === '' && href === '/')) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
